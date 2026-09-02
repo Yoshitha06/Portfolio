@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yoshitha Ankam | Software Engineer & Full Stack Developer</title>
+
+    <meta name="description"
+        content="Yoshitha Ankam is a Computer Science student at NIT Rourkela and a full-stack developer specializing in React, Node.js, MongoDB, and software engineering.">
+
+    <meta name="keywords"
+        content="Yoshitha Ankam, Software Engineer, Full Stack Developer, React Developer, Node.js Developer, NIT Rourkela">
+
+    <meta property="og:title" content="Yoshitha Ankam | Portfolio">
+    <meta property="og:description" content="Software Engineering and Full Stack Development Portfolio">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.36.0/tabler-icons.min.css">
+
+    <style>
+        :root {
+            --bg: #09090b;
+            --panel: #18181b;
+            --panel-light: #222225;
+            --text: #f4f4f5;
+            --muted: #a1a1aa;
+            --border: #27272a;
+            --accent: #3bf73e;
+            --accent-soft: rgba(59, 247, 62, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--muted);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-image:
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(9, 9, 11, 0.88);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-resume {
+            border: 1px solid var(--accent);
+            color: var(--accent) !important;
+            padding: 7px 12px;
+            border-radius: 6px;
+        }
+
+        .nav-resume:hover {
+            background: var(--accent);
+            color: var(--bg) !important;
+        }
+
+        .menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 120px 20px 60px;
+        }
+
+        .hero {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+            margin-bottom: 90px;
+        }
+
+        .terminal-header {
+            background: #27272a;
+            padding: 11px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-r {
+            background: #ef4444;
+        }
+
+        .dot-y {
+            background: #eab308;
+        }
+
+        .dot-g {
+            background: #22c55e;
+        }
+
+        .terminal-name {
+            margin-left: 10px;
+            color: #71717a;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+
+        .hero-content {
+            padding: 50px 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-family: 'JetBrains Mono', monospace;
+            color: white;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            font-size: 1.05rem;
+            margin-bottom: 22px;
+        }
+
+        .hero-description {
+            color: #d4d4d8;
+            max-width: 650px;
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        .availability {
+            margin-top: 18px;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 7px 12px;
+            border-radius: 5px;
+            border: 1px solid rgba(59, 247, 62, 0.2);
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .hero-visual {
+            position: relative;
+            width: 170px;
+            height: 170px;
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            position: relative;
+            z-index: 2;
+        }
+
+        .visual-accent {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 100%;
+            height: 100%;
+            border-right: 2px dashed var(--accent);
+            border-top: 2px dashed var(--accent);
+            border-radius: 14px;
+            opacity: 0.5;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            background: #27272a;
+            color: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .resume-btn {
+            border-color: var(--accent) !important;
+            color: var(--accent) !important;
+        }
+
+        .resume-download {
+            background: var(--accent) !important;
+            color: var(--bg) !important;
+            font-weight: 700;
+        }
+
+        .resume-download:hover {
+            box-shadow: 0 0 20px rgba(59, 247, 62, 0.35);
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .section {
+            margin-bottom: 90px;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            color: white;
+            font-size: 1.35rem;
+            margin-bottom: 30px;
+        }
+
+        .section-title::before {
+            content: '~/';
+            color: var(--accent);
+        }
+
+        .section-title::after {
+            content: '';
+            height: 1px;
+            background: var(--border);
+            flex: 1;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .about-card p {
+            color: #d4d4d8;
+            margin-bottom: 15px;
+            line-height: 1.85;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            transition: 0.2s;
+        }
+
+        .skill-pill i {
+            font-size: 1.35rem;
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: 0.25s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-img-wrapper {
+            height: 190px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .project-card:hover .project-img {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card h4 {
+            font-family: 'JetBrains Mono', monospace;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            font-size: 0.92rem;
+            line-height: 1.75;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .project-highlights li {
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+        }
+
+        .project-highlights li::before {
+            content: '> ';
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .tech-pill {
+            color: var(--accent);
+            background: var(--accent-soft);
+            border: 1px solid rgba(59, 247, 62, 0.18);
+            border-radius: 4px;
+            padding: 4px 9px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-top: 15px;
+            border-top: 1px dotted var(--border);
+        }
+
+        .project-links a {
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            transition: 0.2s;
+        }
+
+        .project-links a:hover {
+            color: var(--accent);
+        }
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            border-left: 2px dashed var(--border);
+            padding-left: 30px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            left: -37px;
+            top: 4px;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .timeline-role {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.12rem;
+            color: white;
+        }
+
+        .timeline-company {
+            margin-top: 4px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            margin: 12px 0;
+            padding: 4px 10px;
+            background: var(--accent-soft);
+            border-radius: 4px;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        .timeline-desc {
+            line-height: 1.8;
+            font-size: 0.93rem;
+        }
+
+        .timeline-desc ul {
+            margin-top: 12px;
+            padding-left: 18px;
+        }
+
+        .timeline-desc li {
+            margin-bottom: 8px;
+        }
+
+        .metric {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 45px 30px;
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .contact-buttons a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #27272a;
+            color: white;
+            padding: 11px 18px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+
+        .contact-buttons a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* =========================
+           RESUME MODAL
+        ========================= */
+
+        .resume-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 5000;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(7px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .resume-modal.active {
+            display: flex;
+        }
+
+        .resume-modal-content {
+            width: min(950px, 96vw);
+            height: min(900px, 92vh);
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
+        }
+
+        .resume-modal-header {
+            padding: 15px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .resume-modal-header h3 {
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+        }
+
+        .resume-close {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .resume-close:hover {
+            color: var(--accent);
+        }
+
+        .resume-frame {
+            width: 100%;
+            flex: 1;
+            border: none;
+            background: white;
+        }
+
+        .resume-modal-actions {
+            padding: 13px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .resume-modal-actions a {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            padding: 10px 18px;
+            border-radius: 6px;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px dashed var(--border);
+            color: #71717a;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 58px;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                background: var(--panel);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 35px 22px;
+            }
+
+            .hero-visual {
+                width: 140px;
+                height: 140px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .availability {
+                justify-content: center;
+            }
+
+            .section {
+                margin-bottom: 70px;
+            }
+
+            .container {
+                padding-top: 95px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-links a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .contact-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="nav-logo">YA<span>.</span></a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">
+                <i class="ti ti-menu-2"></i>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main class="container">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="terminal-header">
+                <div class="dot dot-r"></div>
+                <div class="dot dot-y"></div>
+                <div class="dot dot-g"></div>
+
+                <span class="terminal-name">
+                    yoshitha@portfolio:~
+                </span>
+            </div>
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <h1>Yoshitha Ankam</h1>
+
+                    <h2>$ echo "Software Engineering & Full Stack Development"</h2>
+
+                    <p class="hero-description">
+                        Computer Science student at National Institute of Technology,
+                        Rourkela, passionate about software engineering, full-stack
+                        web development, building impactful applications, and solving
+                        real-world problems through technology.
+                    </p>
+
+                    <div class="availability">
+                        <span class="availability-dot"></span>
+                        Open to Software Engineering opportunities
+                    </div>
+
+                    <div class="social-links">
+
+                        <!-- Opens resume inside the portfolio -->
+                        <a href="#" id="viewResumeBtn" class="resume-btn">
+                            <i class="ti ti-file-text"></i>
+                            View Resume
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+                    <!-- Replace this image URL with your professional photo -->
+                    <img src="https://via.placeholder.com/400x400.png?text=Yoshitha+Ankam" alt="Yoshitha Ankam"
+                        class="profile-img">
+
+                    <div class="visual-accent"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="section" id="about">
+
+            <h3 class="section-title">about</h3>
+
+            <div class="about-card">
+
+                <p>
+                    I enjoy building applications from idea to deployment, with a
+                    particular interest in full-stack web development.
+                </p>
+
+                <p>
+                    My experience includes working with React.js, Node.js, Express,
+                    MongoDB, JavaScript, C++, and Python. I focus on writing clean,
+                    maintainable code and continuously improving my problem-solving skills.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section class="section" id="skills">
+
+            <h3 class="section-title">skills</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-pill">
+                    <i class="devicon-cplusplus-plain colored"></i>
+                    C++
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-python-plain colored"></i>
+                    Python
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-html5-plain colored"></i>
+                    HTML5
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-css3-plain colored"></i>
+                    CSS3
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-javascript-plain colored"></i>
+                    JavaScript
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-react-original colored"></i>
+                    React
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-nodejs-plain colored"></i>
+                    Node.js
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-express-original"></i>
+                    Express.js
+                </div>
+
+                <div class="skill-pill">
+                    <i class="devicon-mongodb-plain colored"></i>
+                    MongoDB
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section class="section" id="projects">
+
+            <h3 class="section-title">projects</h3>
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-img-wrapper">
+                        <img src="task_manager_ss.png" alt="Task Manager project screenshot" class="project-img">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Task Manager</h4>
+
+                        <ul class="project-highlights">
+                            <li>Built a full-stack Kanban task management application.</li>
+                            <li>Implemented secure JWT authentication and password encryption.</li>
+                            <li>Enabled users to create, move and delete tasks across custom columns.</li>
+                            <li>Designed backend APIs and database storage for user-specific data.</li>
+                        </ul>
+
+                        <div class="tech-stack">
+                            <span class="tech-pill">React.js</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">Express.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <!-- Add deployed project URL here when available -->
+                            <!--
+                            <a href="YOUR_LIVE_DEMO_URL" target="_blank">
+                                <i class="ti ti-external-link"></i>
+                                ./live_demo
+                            </a>
+                            -->
+
+                            <a href="https://github.com/Yoshitha06/Task_Manager" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="devicon-github-original"></i>
+                                ./view_source
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-img-wrapper">
+                        <img src="quiz_app_ss.png" alt="Quiz App project screenshot" class="project-img">
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Quiz App</h4>
+
+                        <ul class="project-highlights">
+                            <li>Developed an interactive multiple-choice quiz application.</li>
+                            <li>Implemented instant correctness feedback for answers.</li>
+                            <li>Built score tracking and final score summaries.</li>
+                            <li>Added quiz reset functionality for repeated practice.</li>
+                        </ul>
+
+                        <div class="tech-stack">
+                            <span class="tech-pill">HTML</span>
+                            <span class="tech-pill">CSS</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">React.js</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/Yoshitha06/Quiz-App" target="_blank" rel="noopener noreferrer">
+                                <i class="devicon-github-original"></i>
+                                ./view_source
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!--
+                OPTIONAL: ADD YOUR STRONGEST FUTURE PROJECT HERE
+
+                Recommended projects to add:
+                - ShopSphere e-commerce platform
+                - AI-powered application
+                - Real-world SaaS application
+                - Scalable backend project
+                -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
+
+        <section class="section" id="experience">
+
+            <h3 class="section-title">experience</h3>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-role">
+                        Full Stack Web Developer Intern
+                    </div>
+
+                    <div class="timeline-company">
+                        @ Technocolabs Softwares
+                    </div>
+
+                    <div class="timeline-date">
+                        May 2026 — July 2026
+                    </div>
+
+                    <div class="timeline-desc">
+
+                        <ul>
+                            <li>
+                                Built backend and database systems for ShopSphere,
+                                an e-commerce platform supporting multiple vendors,
+                                sales tracking, transaction logs and order management.
+                            </li>
+
+                            <li>
+                                Integrated full-stack features using React.js, Node.js,
+                                Express and MongoDB, including vendor dashboards,
+                                automated refunds and product review ratings.
+                            </li>
+
+                            <li>
+                                Designed database models and optimized analytics queries
+                                to generate complex reports in
+                                <span class="metric">under 200 milliseconds</span>.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+            LEADERSHIP & ACTIVITIES
+        ========================== -->
+
+        <section class="section" id="leadership">
+
+            <h3 class="section-title">leadership and activities</h3>
+
+            <div class="timeline">
+
+
+                <!-- GAMES & SPORTS SECRETARY -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-role">
+                        Games & Sports Secretary
+                    </div>
+
+                    <div class="timeline-company">
+                        @ KMS Hall of Residence, NIT Rourkela
+                    </div>
+
+                    <div class="timeline-date">
+                        September 2024 — August 2025
+                    </div>
+
+                    <div class="tech-stack">
+                    
+                        <span class="tech-pill">Leadership</span>
+                        <span class="tech-pill">Event Management</span>
+                        <span class="tech-pill">Community</span>
+                        <span class="tech-pill">Governance</span>
+                    
+                    </div>
+
+                    <div class="timeline-desc">
+
+                        <ul>
+
+                            <li>
+                                Elected as Games & Sports Secretary, earning the trust
+                                of <span class="metric">400+ hostel residents</span>.
+                            </li>
+
+                            <li>
+                                Organized and managed various sports events,
+                                demonstrating leadership, event management, and
+                                coordination skills.
+                            </li>
+
+                            <li>
+                                Served as a member of the
+                                <span class="metric">Hall Management Council (HMC)</span>,
+                                contributing to hostel governance and decision-making.
+                            </li>
+
+                            <li>
+                                Volunteered in planning special occasions and college
+                                festivals, demonstrating active community involvement.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXECUTIVE LEAD -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-role">
+                        Executive Lead
+                    </div>
+
+                    <div class="timeline-company">
+                        @ 3D Club, NIT Rourkela
+                    </div>
+
+                    <div class="timeline-date">
+                        June 2025 — July 2026
+                    </div>
+
+                    <div class="tech-stack">
+                    
+                        <span class="tech-pill">Leadership</span>
+                        <span class="tech-pill">Team Coordination</span>
+                        <span class="tech-pill">Workshops</span>
+                        <span class="tech-pill">Student Engagement</span>
+                    
+                    </div>
+
+                    <div class="timeline-desc">
+
+                        <ul>
+
+                            <li>
+                                Planned and organized workshops and technical activities
+                                to enhance students' skills and interest in emerging
+                                technologies.
+                            </li>
+
+                            <li>
+                                Helped create learning opportunities and encouraged
+                                students to actively participate in technical events
+                                and club activities.
+                            </li>
+
+                            <li>
+                                Coordinated with the core team to manage club
+                                operations, responsibilities, and event execution.
+                            </li>
+
+                            <li>
+                                Ensured smooth execution of tasks and contributed to
+                                increasing student engagement across club activities.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+
+        <section class="section" id="education">
+
+            <h3 class="section-title">education</h3>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-role">
+                        Bachelor of Technology — Computer Science
+                    </div>
+
+                    <div class="timeline-company">
+                        National Institute of Technology, Rourkela | CGPA: 7.83
+                    </div>
+
+                    <div class="timeline-date">
+                        2023 — 2027
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACHIEVEMENTS
+        ========================== -->
+
+        <section class="section">
+
+            <h3 class="section-title">achievements</h3>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-role">
+                        ATF 2024 — Stage 2 Candidate
+                    </div>
+
+                    <div class="timeline-company">
+                        AlgoUniversity
+                    </div>
+
+                    <div class="timeline-date">
+                        October 2024
+                    </div>
+
+                    <div class="timeline-desc">
+                        Successfully cleared the first two stages of the
+                        AlgoUniversity Technology Fellowship 2024, demonstrating
+                        technical expertise and problem-solving ability.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section class="section" id="contact">
+
+            <h3 class="section-title">contact</h3>
+
+            <div class="contact-card">
+
+                <h2>Let's build something impactful.</h2>
+
+                <p>
+                    I am interested in opportunities where I can contribute to
+                    meaningful software products, learn from experienced engineers,
+                    and continue growing as a developer.
+                </p>
+
+                <div class="contact-buttons">
+
+                    <!-- Replace with your actual email address -->
+                    <a href="mailto:YOUR_EMAIL@example.com">
+                        <i class="ti ti-mail"></i>
+                        Email
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/yoshithaankam" target="_blank" rel="noopener noreferrer">
+                        <i class="devicon-linkedin-plain"></i>
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/Yoshitha06" target="_blank" rel="noopener noreferrer">
+                        <i class="devicon-github-original"></i>
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RESUME MODAL
+    ========================== -->
+
+    <div class="resume-modal" id="resumeModal">
+
+        <div class="resume-modal-content">
+
+            <div class="resume-modal-header">
+
+                <h3>Yoshitha Ankam — Resume</h3>
+
+                <button class="resume-close" id="closeResumeModal" aria-label="Close resume">
+                    ×
+                </button>
+
+            </div>
+
+            <!-- Resume PDF is displayed here -->
+            <iframe src="Yoshitha_Ankam_Resume.pdf" class="resume-frame" title="Yoshitha Ankam Resume"></iframe>
+
+            <div class="resume-modal-actions">
+
+                <a href="Yoshitha_Ankam_Resume.pdf" download="Yoshitha_Ankam_Resume.pdf">
+                    <i class="ti ti-download"></i>
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <p>© 2026 Yoshitha Ankam</p>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* Mobile navigation */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+        });
+
+
+        /* Resume modal */
+
+        const viewResumeBtn = document.getElementById("viewResumeBtn");
+        const resumeModal = document.getElementById("resumeModal");
+        const closeResumeModal = document.getElementById("closeResumeModal");
+
+        viewResumeBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            resumeModal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+
+        closeResumeModal.addEventListener("click", closeResume);
+
+        function closeResume() {
+            resumeModal.classList.remove("active");
+            document.body.style.overflow = "auto";
+        }
+
+        resumeModal.addEventListener("click", function (event) {
+            if (event.target === resumeModal) {
+                closeResume();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" &&
+                resumeModal.classList.contains("active")) {
+                closeResume();
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
